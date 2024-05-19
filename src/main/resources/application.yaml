@@ -5,13 +5,13 @@ spring:
     name: hmdp
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/hmdp?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://47.113.205.72:3306/hmdp?useSSL=false&serverTimezone=UTC
     username: root
-    password: 123
+    password: 111
   redis:
-    host: 192.168.150.101
+    host: 47.113.205.72
     port: 6379
-    password: 123321
+    password: 111
     lettuce:
       pool:
         max-active: 10
@@ -25,3 +25,9 @@ mybatis-plus:
 logging:
   level:
     com.hmdp: debug
+bloom-filter:
+  expected-insertions: 1000000  # 期望插入的元素数量
+  fpp: 0.01  # 误判率
+snowflake-id:
+  worker-id: 30
+  datacenter-id: 30
